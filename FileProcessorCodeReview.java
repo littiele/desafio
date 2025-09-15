@@ -18,7 +18,7 @@ public class FileProcessorCodeReview {
     private static final List<String> lines = new CopyOnWriteArrayList<>();
 
     private static Logger log = LoggerFactory.getLogger(FileProcessorCodeReview.class);
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, InterruptedException {
         ExecutorService executor = Executors.newFixedThreadPool(5);
 
         /*
@@ -51,6 +51,7 @@ public class FileProcessorCodeReview {
         } catch (IOException | InterruptedException e) {
             log.error("Error processing file", e.getMessage());
             Thread.currentThread().interrupt();
+            throw e;
         }
     }
 }
