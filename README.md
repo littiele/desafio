@@ -8,8 +8,8 @@ Com base na minaha analise segue as alteracoes:</br>
 5- Como boa pratica no catch o  e.printStackTrace(); não é adequado para produção. Entao adicionei uma linha de log.error para em uma possivel melhoria tratar a exception conforme for necessario.</br>
 
 # C#
-1- Substituição de List<string> por ConcurrentBag<string> → coleção thread-safe.
-2- Uso de Task.WhenAll para aguardar todas as tasks antes de prosseguir.
-3- Alteração do HttpClient para instância estática reutilizável.
-4- Adição de tratamento de exceções em DownloadAsync.
+1- Substituição de List<string> por ConcurrentBag<string> → coleção thread-safe.</br>
+2- Uso de Task.WhenAll para aguardar todas as tasks antes de prosseguir.</br>
+3- Alteração do HttpClient para instância estática reutilizável.</br>
+4- Adição de tratamento de exceções em DownloadAsync.</br>
 5- Ajuste das mensagens de log → só imprimir "All downloads completed" após conclusão real dos downloads.
